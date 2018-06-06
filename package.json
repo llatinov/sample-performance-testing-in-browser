@@ -1,0 +1,18 @@
+{
+  "name": "sample-performance-testing-in-browser",
+  "version": "1.0.0",
+  "description": "Performance testing in browser with Puppeteer and Lighthouse",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
+    "lighthouse": "lighthouse"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "lighthouse": "^2.9.4",
+    "puppeteer": "^1.4.0"
+  }
+}
