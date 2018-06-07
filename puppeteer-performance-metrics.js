@@ -2,7 +2,8 @@
 
 const puppeteer = require('puppeteer');
 const perfConfig = require('./config.performance.js');
-const { gatherPerformanceTimingMetrics, gatherLighthouseMetrics } = require('./helpers');
+const { gatherPerformanceTimingMetrics,
+  gatherLighthouseMetrics } = require('./helpers');
 
 (async () => {
   const browser = await puppeteer.launch({

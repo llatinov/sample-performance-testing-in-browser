@@ -21,11 +21,10 @@ const { gatherPerformanceTimingMetric,
   console.log(`DOM load: ${metrics.domLoaded}`);
   console.log(`DOM interactive: ${metrics.domInteractive}`);
   console.log(`Document load: ${metrics.pageLoad}`);
-  console.log(`Full time: ${metrics.fullTime}`);
+  console.log(`Full load time: ${metrics.fullTime}`);
 
   const loadEventEnd = await gatherPerformanceTimingMetric(page, 'loadEventEnd');
-  const date = new Date(0);
-  date.setUTCSeconds(loadEventEnd);
+  const date = new Date(loadEventEnd);
   console.log(`Page load ended on: ${date}`);
 
   await browser.close();
