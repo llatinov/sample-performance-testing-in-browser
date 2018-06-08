@@ -22,13 +22,14 @@ const throughputKBs = process.env.throughput || 200;
   await client.send('Page.navigate', {
     'url': 'https://automationrhapsody.com'
   });
-  await page.waitForSelector('#footer', {
-    timeout: 240000
+  await page.waitForNavigation({
+    timeout: 240000,
+    waitUntil: 'load'
   });
   const end = (new Date()).getTime();
   const totalTimeSeconds = (end - start) / 1000;
 
-  console.log(`Page loaded for ${totalTimeSeconds} seconds when connection is ${throughputKBs}kbit/s`);
+  console.log(`Page loaded for ${totalTimeSeconds} seconds when connection is ${throughputKBs}Kbit/s`);
 
   await browser.close();
 })();
